@@ -1,6 +1,6 @@
 # 2.4 Justificativas
 
- # 2.4.1 Por que o Qwen 2.5:3B?
+## 2.4.1 Por que o Qwen 2.5:3B?
 
 ## Tamanho e Viabilidade Local
 A versão de **3 bilhões de parâmetros** do Qwen 2.5 caracteriza-se como um modelo robusto, mas otimizado o suficiente para ser executado com fluidez em hardware de consumo.  
