@@ -27,7 +27,11 @@ O **Ollama** é uma ferramenta de código aberto que permite executar Modelos de
 O projeto foi criado para **remover as barreiras técnicas** que historicamente tornavam o uso de LLMs complexo: configuração de ambientes, gerenciamento de pesos de modelos, aceleração por GPU e compatibilidade de hardware. O Ollama abstrai toda essa complexidade, oferecendo uma interface simples tanto para uso via linha de comando quanto para integração via API REST.
  
 ### Arquitetura técnica
- 
+
+![Arquitetura do Ollama](../img/diagrama_arquitetura_ollama.png)
+
+ <p align="center"><b>Fonte:</b> <a href="https://codewiki.google/github.com/ollama/ollama">Imagem gerada com Code Wiki</a>, 2026.</p>
+
 O Ollama utiliza uma arquitetura **cliente-servidor**:
  
 - O **cliente** é a interface de linha de comando (CLI) pela qual o usuário digita comandos.
@@ -98,6 +102,220 @@ O Ollama representa um avanço significativo na democratização da infraestrutu
 A filosofia *local-first* do Ollama contribui para reduzir a desigualdade no acesso à IA. Modelos de linguagem poderosos, antes acessíveis apenas mediante pagamento por uso a empresas como OpenAI e Anthropic, tornam-se disponíveis gratuitamente a qualquer pessoa com um computador convencional. Isso é especialmente relevante em países em desenvolvimento, onde os custos de acesso a APIs externas podem ser proibitivos. O Ollama, portanto, alinha-se ao ODS 10 ao ampliar o acesso equitativo a tecnologias transformadoras.
  
 ---
+# Qwen 2.5 3B
+
+
+![](../img/qwen2.5-logo.png)
+ 
+# Informações Gerais do Produto
+
+**Nome do produto:** Qwen2.5-3B
+
+**Versão do produto:** Qwen2.5-3B (lançado em setembro de 2024, integrante da família Qwen2.5)
+
+**Aplicação do produto:** Modelo de Linguagem de Pequeno Porte (SLM - Small Language Model) para geração de texto, chatbots, agentes inteligentes, programação, raciocínio matemático, processamento de dados estruturados e automação baseada em IA.
+
+**Organização responsável:** Qwen Team (Alibaba Cloud)
+
+**Repositório do Código Principal:** https://github.com/QwenLM/Qwen2.5
+
+**Licença do Produto:** Qwen Research License (licença específica para a variante 3B). Diferentemente da maioria dos modelos da família Qwen2.5, que utilizam Apache 2.0, o Qwen2.5-3B é distribuído sob esta licença própria.
+
+**Linguagem de implementação:** Python (ecossistema de treinamento e inferência), com arquitetura baseada em Transformers. Compatível com frameworks como Hugging Face Transformers, vLLM, SGLang, Ollama e llama.cpp.
+
+**Site oficial:** https://qwenlm.github.io/
+
+**Página oficial do modelo:** https://huggingface.co/Qwen/Qwen2.5-3B
+
+**Documentação oficial:** https://qwen.readthedocs.io/
+
+
+## O que é o Qwen 2.5 3B
+
+O **Qwen 2.5 3B** é um modelo de linguagem de pequeno porte (**SLM - Small Language Model**) desenvolvido pela equipe **Qwen**, da Alibaba Cloud. Ele faz parte da mais recente geração de modelos fundacionais da família **Qwen2.5**, pré-treinados em um conjunto massivo de dados contendo até **18 trilhões de tokens**.
+
+Apesar do seu tamanho compacto, com aproximadamente **3 bilhões de parâmetros**, ele possui uma alta densidade de conhecimento, entregando um desempenho altamente competitivo que rivaliza com modelos maiores e alcançando uma pontuação superior a **65 no benchmark MMLU**.
+
+> **Observação sobre licenciamento:** Enquanto a maior parte da linha Qwen2.5 utiliza a licença **Apache 2.0**, as variantes **3B** e **72B** foram lançadas sob a **Qwen Research License**.
+
+---
+
+# Arquitetura Técnica
+
+![Arquitetura do Qwen](../img/diagrama_arquitetura_qwen.png)
+
+ <p align="center"><b>Fonte:</b> <a href="https://codewiki.google/github.com/qwenlm/qwen2.5-vl#qwen25-vl-model-core-functionality">Imagem gerada com Code Wiki</a>, 2026.</p>
+
+O Qwen2.5-3B é construído sobre uma arquitetura Transformer otimizada, incorporando avanços tecnológicos como **RoPE (Rotary Position Embeddings)**, **SwiGLU**, **RMSNorm**, **QKV Attention Bias** e **Tied Word Embeddings**. Ele utiliza uma configuração de atenção do tipo **Grouped-Query Attention (GQA)**, com 16 cabeças para Queries (Q) e 2 cabeças para Key-Values (KV), o que contribui para sua eficiência computacional e capacidade de lidar com contextos longos.
+
+## Especificações Técnicas
+
+### Parâmetros
+
+* **Total de parâmetros:** 3,09 bilhões
+* **Parâmetros não embutidos (non-embedding):** 2,77 bilhões
+
+### Camadas e Atenção
+
+* **36 camadas**
+* Utiliza **Grouped-Query Attention (GQA)**
+* **16 cabeças de atenção para Queries (Q)**
+* **2 cabeças para Key-Values (KV)**
+
+### Janela de Contexto
+
+* Suporta até **128.000 tokens de contexto**
+* Capacidade de gerar até **8.192 tokens** por resposta
+
+### Componentes Arquiteturais
+
+A arquitetura Transformer incorpora tecnologias modernas como:
+
+* **RoPE (Rotary Position Embeddings)**
+* **SwiGLU**
+* **RMSNorm**
+* **QKV Attention Bias**
+* **Tied Word Embeddings**
+
+---
+
+# Uso e Capacidades
+
+A versão **Qwen2.5-3B-Instruct** apresenta avanços significativos em relação à geração anterior.
+
+## Suporte Multilíngue
+
+Oferece suporte para mais de **29 idiomas**, incluindo:
+
+* Português
+* Inglês
+* Chinês
+* Espanhol
+* Francês
+* Japonês
+
+## Programação e Matemática
+
+O modelo possui melhorias expressivas em:
+
+* Resolução de problemas matemáticos
+* Geração de código
+* Depuração de código
+* Compreensão de lógica computacional
+
+Essas capacidades foram aprimoradas através da incorporação de conhecimentos oriundos de modelos especialistas nesses domínios.
+
+## Dados Estruturados e JSON
+
+O modelo demonstra excelente desempenho em:
+
+* Interpretação de tabelas
+* Processamento de dados estruturados
+* Geração de saídas JSON
+* Extração e organização de informações
+
+## Chatbots e Role-Play
+
+O Qwen2.5-3B apresenta:
+
+* Alta resiliência a diferentes prompts de sistema
+* Melhor aderência a instruções
+* Maior estabilidade em cenários de chatbot
+* Excelente capacidade de interpretação de papéis (*role-play*)
+
+---
+
+# Integração e Ecossistemas
+
+O modelo foi desenvolvido para funcionar de forma integrada com as principais ferramentas da comunidade de IA.
+
+## Hugging Face
+
+A forma mais simples de utilização ocorre através da biblioteca **Transformers** da Hugging Face.
+
+### Requisito Importante
+
+Utilize versões:
+
+```bash
+transformers >= 4.37.0
+```
+
+Versões anteriores podem causar incompatibilidades e erros de carregamento.
+
+---
+
+## Implantação e Execução Local
+
+O modelo pode ser servido ou executado utilizando:
+
+### Servidores de Inferência
+
+* vLLM
+* SGLang
+
+### Execução Local
+
+* Ollama
+* llama.cpp
+* LM Studio
+
+Ferramentas como **vLLM** e **Ollama** permitem expor uma API compatível com o padrão da OpenAI.
+
+---
+
+## Tool Calling
+
+O Qwen2.5-3B possui suporte nativo para **Tool Calling** (chamadas de ferramentas).
+
+### Plataformas Compatíveis
+
+* vLLM (>= 0.6)
+* Ollama
+* Hugging Face Transformers
+
+### Compatibilidade
+
+O template utilizado foi inspirado no modelo **Hermes (Nous Research)**, mantendo compatibilidade com:
+
+* Template antigo do Qwen2
+* Qwen-Agent
+* Ecossistema legado da família Qwen
+
+---
+
+## Fine-Tuning e Quantização
+
+O modelo é compatível com diversos frameworks de treinamento e otimização.
+
+### Fine-Tuning
+
+* PEFT
+* Llama-Factory
+* Unsloth
+* Swift
+
+### Quantização
+
+* AutoGPTQ
+* AutoAWQ
+
+---
+
+# Principais Vantagens
+
+* Modelo compacto com apenas 3 bilhões de parâmetros
+* Contexto extremamente longo (128k tokens)
+* Excelente desempenho em programação e matemática
+* Forte suporte multilíngue
+* Ótima geração de JSON e dados estruturados
+* Compatível com Ollama, vLLM e Hugging Face
+* Suporte nativo para Tool Calling
+* Amplo suporte para fine-tuning e quantização
+
+---
+
+
  
 ## Bibliografia
  
@@ -135,3 +353,6 @@ A filosofia *local-first* do Ollama contribui para reduzir a desigualdade no ace
 |---|---|---|---|---|
 | 1.0 | 11/05/2026 | Criação da descrição do produto Ollama | [Johnnatan Salles](https://github.com/jsalless) | [Renata Quadros](https://github.com/RenataKurzawa) |
 | 1.1 | 13/05/2026 | Correção na versão atual do Ollama | [Matheus Pinheiro](https://github.com/matheus-06) | [](https://github.com/) |
+| 2.0 | 13/05/2026 | Inserção de informações sobre o Qwen2.5-3B | [Luiza](https://github.com/Luizaxx) | [Johnnatan Salles](https://github.com/jsalless) |
+| 2.1 | 13/05/2026 | Inserção de diagrama de arquitetura Ollamac| [Luiza](https://github.com/Luizaxx) | [Johnnatan Salles](https://github.com/jsalless) |
+
