@@ -192,6 +192,12 @@ Taxa de falhas específicas = Ocorrências de erro tipo T em ambiente X / Total 
 
 >Categorias de erro a monitorar: dependência ausente, permissão negada, incompatibilidade de arquitetura, timeout de download.
 
+# GQM de Portabilidade
+
+<font size="3"><p style="text-align: center">Figura 1: Imagem Feita com IA do GQM de Portabilidade </p></font>
+
+![diagrama da norma square com as duas características](https://i.ibb.co/G3ngKMnq/image.png)
+
 # Conclusões
 
 Com a aplicação do método GQM, foi possível estruturar de forma clara e mensurável a análise de portabilidade do Ollama em conjunto com a LLM Qwen 2.5 3B. As questões formuladas cobrem as subcaracterísticas de portabilidade previstas na ISO/IEC 25010: Adaptabilidade (Q1), Instalabilidade (Q2 e Q3).

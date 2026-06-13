@@ -188,6 +188,14 @@ A complexidade quadrática do mecanismo de atenção dos Transformers deve causa
 >
 > Crescimento excessivo: > 1,0 MB/token.
 
+
+# GQM de Eficiência de Desempenho
+
+
+<font size="3"><p style="text-align: center">Figura 1: Imagem Feita com IA do GQM de Eficiência de Desempenho </p></font>
+
+![diagrama da norma square com as duas características](https://i.ibb.co/KzQYnR7d/image.png)
+
 # Conclusões
 
 Com a aplicação do método GQM, foi possível estruturar de forma mensurável e reproduzível a análise de eficiência de desempenho do Ollama em conjunto com a LLM Qwen 2.5 3B. As quatro questões formuladas cobrem as três subcaracterísticas de eficiência de desempenho previstas na ISO/IEC 25010: Comportamento em Relação ao Tempo (Q1 e Q3), Utilização de Recursos (Q2 e Q3).
